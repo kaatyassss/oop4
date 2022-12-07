@@ -35,13 +35,13 @@ public class TaskRunner {
                 new Employee("Саша")
         );
 
-        System.out.println(Test.getSumTime(operations));
-        System.out.println(Test.getSumCost(operations));
+        System.out.println(TestClass.getSumTime(operations));
+        System.out.println(TestClass.getSumCost(operations));
 
-        System.out.println(Test.getTimeTrace(operations));
-        System.out.println(Test.getCostTrace(operations));
+        System.out.println(TestClass.getTimeTrace(operations));
+        System.out.println(TestClass.getCostTrace(operations));
 
-        for (Operation operation : Test.getOperationsStat(operations)) {
+        for (Operation operation : TestClass.getOperationsStat(operations)) {
             System.out.println(operation.getInfo());
         }
 

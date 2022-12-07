@@ -1,6 +1,8 @@
 package com.kaatyassss.laba4;
 
 
+import java.util.Objects;
+
 public class Operation implements Printable {
 
     protected static int n;
@@ -40,5 +42,18 @@ public class Operation implements Printable {
 
     public int getId() {
         return id;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Operation operation = (Operation) o;
+        return time == operation.time && cost == operation.cost;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(time, cost);
     }
 }

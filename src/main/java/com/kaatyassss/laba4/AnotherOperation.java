@@ -1,5 +1,7 @@
 package com.kaatyassss.laba4;
 
+import java.util.Objects;
+
 public class AnotherOperation implements Printable {
 
     private final int id;
@@ -12,7 +14,7 @@ public class AnotherOperation implements Printable {
 
     @Override
     public String getInfo() {
-        return "Операция " + (id + 1) + ": время - " + time + ".";
+        return "Операция " + id + ": время - " + time + ".";
     }
 
     public int getTime() {
@@ -25,5 +27,18 @@ public class AnotherOperation implements Printable {
 
     public int getId() {
         return id;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        AnotherOperation operation = (AnotherOperation) o;
+        return id == operation.id && time == operation.time;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, time);
     }
 }

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Test {
+public class TestClass {
 
     public static int getSumTime(List<Operation> operations) {
         int sumTime = 0;
@@ -61,7 +61,6 @@ public class Test {
                 uniqueOperation = new Operation(sumTime, sumMoney);
             }
             uniqueOperations.add(uniqueOperation);
-
         }
         Operation.n = oldN;
         return uniqueOperations;
